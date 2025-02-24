@@ -1,0 +1,29 @@
+a {
+    text-decoration: none;
+    color: black
+}
+
+.blocks-content {
+    display: flex;
+    gap: 4%;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.home-title {
+    margin-left: 50px;
+}
+
+.create-order-block, .profile-block {
+    display: inline-block;
+    padding: 1.5% 3%;
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    transition: all .4s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

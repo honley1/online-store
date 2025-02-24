@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/header') %>
+    <link rel="stylesheet" href="/styles/profile.css">
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <div class="container">
+        <div class="profile-container">
+            <div class="profile">
+                <h2>ID: <%= user.id %></h2>
+                <h1>Username: <%= user.username %></h1>
+                <h3>Created at: <%= new Date(user.created_at).toLocaleDateString('ru-RU') %></h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

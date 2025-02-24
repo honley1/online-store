@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/header') %>
+    <link rel="stylesheet" href="/styles/products.css">
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <div class="container">
+        <h1 class="product-title">Product List</h1>
+
+        <% if (products.length === 0) {%>
+            <p>Products not found</p>
+        <% } else { %>
+            <div class="products">
+                <% products.forEach(product => { %>
+                    <div class="product-item">
+                        <p><b>ID: </b><%= product.id %></p>
+                        <p><b>Title: </b><%= product.title %></p>
+                        <p><b>Price: </b><%= product.price %></p>
+                        <p><b>Description: </b><%= product.description %></p>
+                        <p><b>Created at: </b><%= new Date(product.created_at).toLocaleDateString('ru-RU') %></p>
+                    </div>
+                <% }); %>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

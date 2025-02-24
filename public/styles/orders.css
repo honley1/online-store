@@ -1,0 +1,29 @@
+.orders {
+    display: grid;
+    margin-top: 15px;
+    padding: 20px;
+    width: 100%;
+}
+
+.order-item {
+    margin: 15px 0px;
+    padding: 20px;
+    border-radius: 10px;
+
+    background-color: #d4d4d4;
+}
+
+.product-order-title {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.product-order-item {
+    display: inline-block;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+    background-color: rgb(181, 181, 181);
+    padding: 20px;
+    border-radius: 10px;
+}

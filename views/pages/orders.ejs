@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/header') %>
+    <link rel="stylesheet" href="/styles/orders.css">
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <div class="container">
+        <h1>Order List</h1>
+
+        <% if (!orders) {%>
+            <p>Orders not found</p>
+        <% } else {%>
+            <div class="orders">
+                <% orders.forEach(order => { %>
+                    <div class="order-item">
+                        <p><b>ID: </b><%= order.id %></p>
+                        <p><b>Count: </b><%= order.count %></p>
+                        <p><b>Created at: </b><%= new Date(order.created_at).toLocaleDateString('ru-RU') %></p>
+                        <h3 class="product-order-title">Products: </h3>
+                        <% products.forEach( product => { %>
+                            <div class="product-order-item">
+                                <p><b>ID: </b><%= product.id %></p>
+                                <p><b>Title: </b><%= product.title %></p>
+                                <p><b>Price: </b><%= product.price %></p>
+                                <p><b>Description: </b><%= product.description %></p>
+                                <p><b>Created at: </b><%= new Date(product.created_at).toLocaleDateString('ru-RU') %></p>
+                            </div>
+                        <% }); %>
+                    </div>
+                <% }); %>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
