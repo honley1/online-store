@@ -49,10 +49,6 @@ app.use('/users', auth, userRouter);
 app.use('/orders', auth, orderRouter);
 app.use('/products', auth, productRouter);
 
-app.use((req, res, next) => {
-    res.render('pages/next');
-});
-
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
 });
